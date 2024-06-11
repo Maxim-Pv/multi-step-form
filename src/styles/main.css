@@ -1,0 +1,63 @@
+.step1-content {
+  width: 60%;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../../assets/fonts/Ubuntu-Bold.ttf);
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../../assets/fonts/Ubuntu-Medium.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../../assets/fonts/Ubuntu-Regular.ttf);
+  font-weight: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(217, 100%, 97%);
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  margin: 100px auto;
+  border-radius: 20px;
+  background-color: hsl(231, 100%, 99%);
+}
+
+.title {
+  color: hsl(213, 96%, 18%);
+}
+
+.section-steps {
+  background: url(../../assets/images/bg-sidebar-desktop.svg) no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  height: 100%;
+}

@@ -1,0 +1,55 @@
+@import "./blocks/step1";
+@import "./colors";
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../../assets/fonts/Ubuntu-Bold.ttf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../../assets/fonts/Ubuntu-Medium.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../../assets/fonts/Ubuntu-Regular.ttf);
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $Magnolia;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 100px auto;
+  border-radius: 20px;
+  background-color: $Alabaster;
+}
+
+.title {
+  color: $Marine-blue;
+}
+
+.section-steps {
+  background: url(../../assets/images/bg-sidebar-desktop.svg) no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%;
+}
