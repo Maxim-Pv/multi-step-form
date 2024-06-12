@@ -1,5 +1,53 @@
 .step1-content {
-  width: 60%;
+  width: 54%;
+  margin: 30px 100px 20px 0;
+  position: relative;
+}
+
+form {
+  margin-top: 30px;
+}
+
+.form-label {
+  color: hsl(213, 96%, 18%);
+}
+
+.form-control:focus {
+  border-color: hsl(213, 96%, 18%);
+}
+
+.btn-primary {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: hsl(213, 96%, 18%);
+  border: none;
+}
+
+.label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.error {
+  color: hsl(354, 84%, 57%);
+}
+
+.invalid-feedback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  width: 50%;
 }
 
 @font-face {
@@ -31,7 +79,7 @@ body {
 
 .container {
   max-width: 900px;
-  height: 100vh;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +87,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px;
-  margin: 100px auto;
+  margin: 50px auto;
   border-radius: 20px;
   background-color: hsl(231, 100%, 99%);
 }

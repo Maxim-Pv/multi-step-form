@@ -4,6 +4,7 @@ import Step2 from './components/Step2';
 import Step3 from './components/Step3';
 import Step4 from './components/Step4';
 import StepsNavigation from './components/StepsNavigation';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/main.css';
 
 function App() {

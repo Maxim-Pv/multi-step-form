@@ -1,3 +1,44 @@
+@import "../colors";
+
 .step1-content {
-  width: 60%
+  width: 54%;
+  margin: 30px 100px 20px 0;
+  position: relative;
+}
+
+form {
+  margin-top: 30px;
+}
+
+.form-label {
+  color: $Marine-blue;
+}
+
+.form-control:focus {
+  border-color: $Marine-blue;
+}
+
+
+.btn-primary {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: $Marine-blue;
+  border: none;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error {
+  color: $Strawberry-red;
+}
+
+.invalid-feedback {
+  display: flex;
+  justify-content: end;
+  width: 50%;
 }
