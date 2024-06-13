@@ -1,4 +1,5 @@
-@import "./blocks/step1";
+@import "./components/step1";
+@import "./components/stepsNav";
 @import "./colors";
 
 @font-face {
@@ -35,9 +36,9 @@ body {
   height: 80vh;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 15px;
   margin: 50px auto;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: $Alabaster;
 }
 
@@ -45,11 +46,3 @@ body {
   color: $Marine-blue;
 }
 
-.section-steps {
-  background: url(../../assets/images/bg-sidebar-desktop.svg) no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  height: 100%;
-}

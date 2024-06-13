@@ -2,8 +2,16 @@
 
 .step1-content {
   width: 54%;
-  margin: 30px 100px 20px 0;
+  margin: 30px 60px 20px 0;
   position: relative;
+}
+
+.title {
+  font-weight: 900;
+}
+
+.description {
+  color: $Cool-gray;
 }
 
 form {
@@ -11,6 +19,7 @@ form {
 }
 
 .form-label {
+  font-weight: 700;
   color: $Marine-blue;
 }
 
@@ -41,4 +50,8 @@ form {
   display: flex;
   justify-content: end;
   width: 50%;
+}
+
+.form-control::placeholder {
+  color: $Cool-gray;
 }

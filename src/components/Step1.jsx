@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from 'react';
+// import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useFormik } from 'formik';
@@ -40,7 +40,7 @@ const Step1 = () => {
       <div className="step1-content">
         <div>
           <h1 className="title">Personal info</h1>
-          <p>Please provide your name, email address, and phone number.</p>
+          <p className="description">Please provide your name, email address, and phone number.</p>
         </div>
         <Form onSubmit={formik.handleSubmit}>
           <Form.Group className="mb-3">

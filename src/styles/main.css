@@ -1,7 +1,15 @@
 .step1-content {
   width: 54%;
-  margin: 30px 100px 20px 0;
+  margin: 30px 60px 20px 0;
   position: relative;
+}
+
+.title {
+  font-weight: 900;
+}
+
+.description {
+  color: hsl(231, 11%, 63%);
 }
 
 form {
@@ -9,6 +17,7 @@ form {
 }
 
 .form-label {
+  font-weight: 700;
   color: hsl(213, 96%, 18%);
 }
 
@@ -50,6 +59,93 @@ form {
   width: 50%;
 }
 
+.form-control::-webkit-input-placeholder {
+  color: hsl(231, 11%, 63%);
+}
+
+.form-control::-moz-placeholder {
+  color: hsl(231, 11%, 63%);
+}
+
+.form-control:-ms-input-placeholder {
+  color: hsl(231, 11%, 63%);
+}
+
+.form-control::-ms-input-placeholder {
+  color: hsl(231, 11%, 63%);
+}
+
+.form-control::placeholder {
+  color: hsl(231, 11%, 63%);
+}
+
+.steps-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 28%;
+  padding: 40px 30px;
+  height: 100%;
+  background: url(../../assets/images/bg-sidebar-desktop.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  color: hsl(231, 100%, 99%);
+  gap: 25px;
+}
+
+.step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 1px solid hsl(231, 100%, 99%);
+  background-color: inherit;
+  color: hsl(231, 100%, 99%);
+  font-weight: 700;
+}
+
+.active {
+  background-color: hsl(206, 94%, 87%);
+  border: 1px solid hsl(213, 96%, 18%);
+  color: hsl(213, 96%, 18%);
+}
+
+.step-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: normal;
+  font-size: 14px;
+}
+
+.step-name {
+  color: hsl(228, 100%, 84%);
+}
+
 @font-face {
   font-family: "Ubuntu";
   src: url(../../assets/fonts/Ubuntu-Bold.ttf);
@@ -86,26 +182,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px;
+  padding: 15px;
   margin: 50px auto;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: hsl(231, 100%, 99%);
 }
 
 .title {
   color: hsl(213, 96%, 18%);
-}
-
-.section-steps {
-  background: url(../../assets/images/bg-sidebar-desktop.svg) no-repeat;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 20px;
-  height: 100%;
 }

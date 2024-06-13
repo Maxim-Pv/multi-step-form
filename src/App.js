@@ -3,14 +3,14 @@ import Step1 from './components/Step1';
 import Step2 from './components/Step2';
 import Step3 from './components/Step3';
 import Step4 from './components/Step4';
-import StepsNavigation from './components/StepsNavigation';
+import StepsNav from './components/StepsNav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/main.css';
 
 function App() {
   return (
     <div className="container">
-      <StepsNavigation />
+      <StepsNav />
       <Routes>
         <Route path="/step1" element={<Step1 />} />
         <Route path="/step2" element={<Step2 />} />
