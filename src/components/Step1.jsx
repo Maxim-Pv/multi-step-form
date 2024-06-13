@@ -1,5 +1,5 @@
 import React from "react";
-// import { useState } from 'react';
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useFormik } from 'formik';
@@ -20,16 +20,22 @@ const validationSchema = Yup.object({
 
 const Step1 = () => {
   const navigate = useNavigate();
+  const [info, setInfo] = useState(() => {
+    const savedInfo = localStorage.getItem('formData');
+    return savedInfo ? JSON.parse(savedInfo) : {};
+  });
   
   const formik = useFormik({
     initialValues: {
-      name: '',
-      email: '',
-      phone: ''
+      name: info.name || '',
+      email: info.email || '',
+      phone: info.phone || ''
     },
     validationSchema,
     onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
+      const formData = JSON.stringify(values, null, 2);
+      setInfo(formData);
+      localStorage.setItem('formData', formData)
       navigate('/step2');
     },
     
