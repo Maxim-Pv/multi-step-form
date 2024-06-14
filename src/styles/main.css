@@ -1,17 +1,3 @@
-.step1-content {
-  width: 54%;
-  margin: 30px 60px 20px 0;
-  position: relative;
-}
-
-.title {
-  font-weight: 900;
-}
-
-.description {
-  color: hsl(231, 11%, 63%);
-}
-
 form {
   margin-top: 30px;
 }
@@ -77,6 +63,107 @@ form {
 
 .form-control::placeholder {
   color: hsl(231, 11%, 63%);
+}
+
+.plans {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.plan {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding: 15px 13px 12px 13px;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+  color: hsl(213, 96%, 18%);
+}
+
+.plan-img {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 40px;
+}
+
+.img1 {
+  background: url(../../assets/images/icon-arcade.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.img2 {
+  background: url(../../assets/images/icon-advanced.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.img3 {
+  background: url(../../assets/images/icon-pro.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.price {
+  color: hsl(231, 11%, 63%);
+}
+
+.discount {
+  font-size: 14px;
+  letter-spacing: -0.5px;
+}
+
+.btn-back {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  background-color: inherit;
+  border: none;
+  font-weight: 600;
+  color: hsl(231, 11%, 63%);
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.btn-back:hover {
+  color: hsl(213, 96%, 18%);
+}
+
+.toggle {
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: hsl(217, 100%, 97%);
+  border-radius: 10px;
+}
+
+.activePlan {
+  border-color: hsl(243, 100%, 62%);
+  background-color: hsl(217, 100%, 97%);
 }
 
 .steps-nav {
@@ -188,6 +275,17 @@ body {
   background-color: hsl(231, 100%, 99%);
 }
 
+.step-content {
+  width: 54%;
+  margin: 30px 60px 20px 0;
+  position: relative;
+}
+
 .title {
+  font-weight: 900;
   color: hsl(213, 96%, 18%);
+}
+
+.description {
+  color: hsl(231, 11%, 63%);
 }

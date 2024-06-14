@@ -43,7 +43,7 @@ const Step1 = () => {
   
   
   return (
-      <div className="step1-content">
+      <div className="step-content">
         <div>
           <h1 className="title">Personal info</h1>
           <p className="description">Please provide your name, email address, and phone number.</p>
