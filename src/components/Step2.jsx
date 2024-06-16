@@ -1,9 +1,48 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 const Step2 = () => {
   const navigate = useNavigate()
+  const [isYearly, setIsYearly] = useState(false)
+  const [selectedPlan, setSelectedPlan] = useState(() => {
+    const savedPlan = localStorage.getItem('selectedPlan')
+    return savedPlan ? JSON.parse(savedPlan) : {plan: 'Arcade', billing: 'monthly', price: '$9/mo'}
+  })
+
+  useEffect(() => {
+    localStorage.setItem('selectedPlan', JSON.stringify(selectedPlan));
+  }, [selectedPlan]);
+
+  const toggleBilling = () => {
+    setIsYearly(!isYearly);
+    setSelectedPlan((prevSelectedPlan) => ({
+      ...prevSelectedPlan,
+      billing: !isYearly ? 'yearly' : 'monthly',
+      price: !isYearly ? yearlyPrices[prevSelectedPlan.plan] : monthlyPrices[prevSelectedPlan.plan],
+    }));
+  };
+
+  const handlePLanChange = (plan) => {
+    setSelectedPlan({
+      ...selectedPlan,
+      plan: plan,
+      prices: isYearly ? yearlyPrices[plan] : monthlyPrices[plan],
+    });
+  };
+
+  const monthlyPrices = {
+    Arcade: '$9/mo',
+    Advanced: '$12/mo',
+    Pro: '$15/mo'
+  }
+
+  const yearlyPrices = {
+    Arcade: '$90/yr',
+    Advanced: '$120/yr',
+    Pro: '$150/yr'
+  }
 
   return (
     <div className="step-content"> 
@@ -12,34 +51,48 @@ const Step2 = () => {
         <p className="description">You have the option of monthly or yearly billing.</p>
       </div>
       <div className='plans'>
-        <div className='plan'>
+        <div 
+          className={`plan ${selectedPlan.plan === 'Arcade' ? 'selected' : ''}`}
+          onClick={() => handlePLanChange('Arcade')}
+        >
           <span className='plan-img img1'></span>
           <strong>Arcade</strong>
-          <span className='price'>$90/yr</span>
-          <span className='discount'>2 months free</span>
+          <span className='price'>{isYearly ? '$90/yr' : '$9/mo'}</span>
+          {isYearly &&<span className='discount'>2 months free</span>}
         </div>
-        <div className='plan'>
+        <div 
+          className={`plan ${selectedPlan.plan === 'Advanced' ? 'selected' : ''}`}
+          onClick={() => handlePLanChange('Advanced')}
+        >
           <span className='plan-img img2'></span>
           <strong>Advanced</strong>
-          <span className='price'>$120/yr</span>
-          <span className='discount'>2 months free</span>
+          <span className='price'>{isYearly ? '$120/yr' : '$12/mo'}</span>
+          {isYearly &&<span className='discount'>2 months free</span>}
         </div>
-        <div className='plan'>
+        <div 
+          className={`plan ${selectedPlan.plan === 'Pro' ? 'selected' : ''}`}
+          onClick={() => handlePLanChange('Pro')}
+        >
           <span className='plan-img img3'></span>
           <strong>Pro</strong>
-          <span className='price'>$150/yr</span>
-          <span className='discount'>2 months free</span>
+          <span className='price'>{isYearly ? '$150/yr' : '$15/mo'}</span>
+          {isYearly &&<span className='discount'>2 months free</span>}
         </div>
       </div>
 
       <div className='toggle'>
         <span>Monthly</span>
-        <span className='toggle-switch'>toggle</span>
+        <Form.Check
+          type="switch"
+          id="custom-switch"
+          checked={isYearly}
+          onChange={toggleBilling}
+        />
         <span>Yearly</span>
       </div>
 
       <button className='btn-back' onClick={() => navigate(-1)}>Go Back</button>
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" onClick={() => navigate('/step3')}>
             Next Step
       </Button>
     </div>
