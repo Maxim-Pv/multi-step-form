@@ -1,0 +1,48 @@
+.addons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.addon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid $Light-gray;
+  border-radius: 10px;
+  cursor: pointer;
+
+  div {
+    p {
+      margin: 0;
+      line-height: normal;
+      font-size: 14px;
+      color: $Cool-gray;
+    }
+  }
+
+  span {
+    color: $Purplish-blue;
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.addon.selected {
+  border-color: $Purplish-blue;
+}
+
+// .form-check-input {
+//   border: 1px solid $Light-gray;
+//   background-color: inherit;
+// }
+
+// .form-check-input:checked {
+//   background-color: $Purplish-blue;
+// }

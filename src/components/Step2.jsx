@@ -28,7 +28,7 @@ const Step2 = () => {
     setSelectedPlan({
       ...selectedPlan,
       plan: plan,
-      prices: isYearly ? yearlyPrices[plan] : monthlyPrices[plan],
+      price: isYearly ? yearlyPrices[plan] : monthlyPrices[plan],
     });
   };
 

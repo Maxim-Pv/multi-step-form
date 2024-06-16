@@ -1,7 +1,3 @@
-form {
-  margin-top: 30px;
-}
-
 .form-label {
   font-weight: 700;
   color: hsl(213, 96%, 18%);
@@ -181,6 +177,60 @@ form {
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%27-4%20-4%208%208%27%3E%3Ccircle%20r%3D%273%27%20fill%3D%27%23fff%27%2F%3E%3C%2Fsvg%3E");
 }
 
+.addons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.addon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.addon div p {
+  margin: 0;
+  line-height: normal;
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+}
+.addon span {
+  color: hsl(243, 100%, 62%);
+}
+
+.checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.addon.selected {
+  border-color: hsl(243, 100%, 62%);
+}
+
 .steps-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -302,5 +352,6 @@ body {
 }
 
 .description {
+  margin-bottom: 30px;
   color: hsl(231, 11%, 63%);
 }
