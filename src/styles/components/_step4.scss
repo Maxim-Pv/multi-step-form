@@ -1,0 +1,59 @@
+.plan {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: $Magnolia;
+  border: none;
+}
+
+.plan-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $Light-gray;
+}
+
+.plan-name {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-weight: 800;
+  color: $Marine-blue;
+}
+
+.btn-change {
+  background-color: inherit;
+  border: none;
+  color: $Cool-gray;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.plan-price {
+  color: $Marine-blue;
+}
+
+.selected-addons {
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.addon-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.addon-name,
+.total {
+  color: $Cool-gray;
+}
+
+.addon-price {
+  color: $Marine-blue;
+}

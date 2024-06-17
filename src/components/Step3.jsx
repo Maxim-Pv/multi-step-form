@@ -17,11 +17,17 @@ const Step3 = () => {
     localStorage.setItem('selectedAddons', JSON.stringify(selectedAddons));
   }, [selectedAddons]);
 
-  const [addons, setAddons] = useState({
+  const initialAddons = {
     onlineService: false,
     largerStorage: false,
     customizableProfile: false,
-  })
+  };
+
+  selectedAddons.forEach((addon) => {
+    initialAddons[addon.addonName] = true;
+  });
+
+  const [addons, setAddons] = useState(initialAddons);
 
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target

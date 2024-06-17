@@ -5,11 +5,12 @@ import Form from 'react-bootstrap/Form';
 
 const Step2 = () => {
   const navigate = useNavigate()
-  const [isYearly, setIsYearly] = useState(false)
   const [selectedPlan, setSelectedPlan] = useState(() => {
     const savedPlan = localStorage.getItem('selectedPlan')
     return savedPlan ? JSON.parse(savedPlan) : {plan: 'Arcade', billing: 'monthly', price: '$9/mo'}
   })
+  
+  const [isYearly, setIsYearly] = useState(selectedPlan.billing === 'yearly');
 
   useEffect(() => {
     localStorage.setItem('selectedPlan', JSON.stringify(selectedPlan));
