@@ -1,6 +1,7 @@
-.summary {
+.step-content.summary {
   display: flex;
   flex-direction: column;
+  justify-content: unset;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -12,4 +13,9 @@
   height: 60px;
   background: url(../../assets/images/icon-thank-you.svg) no-repeat;
   background-size: contain;
+}
+
+.summary-text {
+  text-align: center;
+  color: $Cool-gray;
 }

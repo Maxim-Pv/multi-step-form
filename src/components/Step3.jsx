@@ -90,72 +90,77 @@ const Step3 = () => {
 
   return (
     <div className="step-content">
-      <h1 className="title">Pick add-ons</h1>
-      <p className="description">Add-ons help enhance your gaming experience.</p>
-      <div className='addons'>
-        <div 
-          className={`addon ${addons.onlineService ? 'selected' : ''}`}      
-          onClick={() => handleAddonClick('onlineService')}
-        >
-          <div className='checkbox' onClick={(e) => e.stopPropagation()}>
-            <Form.Check
-              type='checkbox'
-              id='onlineService'
-              name='onlineService'
-              checked={addons.onlineService}
-              onChange={handleCheckboxChange}
-            />
-            <div>
-              <strong>Online service</strong>
-              <p>Access to multiplayer games</p>
-            </div>
-          </div>
-          <span>{monthly ? '+$1/mo' : '+$10/yr'}</span>
+      <div>
+        <div>
+          <h1 className="title">Pick add-ons</h1>
+          <p className="description">Add-ons help enhance your gaming experience.</p>
         </div>
-        <div 
-          className={`addon ${addons.largerStorage ? 'selected' : ''}`}  
-          onClick={() => handleAddonClick('largerStorage')}
-        >
-          <div className='checkbox' onClick={(e) => e.stopPropagation()}>
-            <Form.Check
-              type='checkbox'
-              id='largerStorage'
-              name='largerStorage'
-              checked={addons.largerStorage}
-              onChange={handleCheckboxChange}
-            />
-            <div>
-              <strong>Larger storage</strong>
-              <p>Extra 1TB of cloud save</p>
+        <div className='addons'>
+          <div 
+            className={`addon ${addons.onlineService ? 'selected' : ''}`}      
+            onClick={() => handleAddonClick('onlineService')}
+          >
+            <div className='checkbox' onClick={(e) => e.stopPropagation()}>
+              <Form.Check
+                type='checkbox'
+                id='onlineService'
+                name='onlineService'
+                checked={addons.onlineService}
+                onChange={handleCheckboxChange}
+              />
+              <div>
+                <strong>Online service</strong>
+                <p>Access to multiplayer games</p>
+              </div>
             </div>
+            <span>{monthly ? '+$1/mo' : '+$10/yr'}</span>
           </div>
-          <span>{monthly ? '+$2/mo' : '+$20/yr'}</span>
-        </div>
-        <div 
-          className={`addon ${addons.customizableProfile ? 'selected' : ''}`} 
-          onClick={() => handleAddonClick('customizableProfile')}
-        >
-          <div className='checkbox' onClick={(e) => e.stopPropagation()}>
-            <Form.Check
-              type='checkbox'
-              id='default-checkbox'
-              name='customizableProfile'
-              checked={addons.customizableProfile}
-              onChange={handleCheckboxChange}
-            />
-            <div>
-              <strong>Customizable profile</strong>
-              <p>Custom theme on your profile</p>
+          <div 
+            className={`addon ${addons.largerStorage ? 'selected' : ''}`}  
+            onClick={() => handleAddonClick('largerStorage')}
+          >
+            <div className='checkbox' onClick={(e) => e.stopPropagation()}>
+              <Form.Check
+                type='checkbox'
+                id='largerStorage'
+                name='largerStorage'
+                checked={addons.largerStorage}
+                onChange={handleCheckboxChange}
+              />
+              <div>
+                <strong>Larger storage</strong>
+                <p>Extra 1TB of cloud save</p>
+              </div>
             </div>
+            <span>{monthly ? '+$2/mo' : '+$20/yr'}</span>
           </div>
-          <span>{monthly ? '+$2/mo' : '+$20/yr'}</span>
+          <div 
+            className={`addon ${addons.customizableProfile ? 'selected' : ''}`} 
+            onClick={() => handleAddonClick('customizableProfile')}
+          >
+            <div className='checkbox' onClick={(e) => e.stopPropagation()}>
+              <Form.Check
+                type='checkbox'
+                id='default-checkbox'
+                name='customizableProfile'
+                checked={addons.customizableProfile}
+                onChange={handleCheckboxChange}
+              />
+              <div>
+                <strong>Customizable profile</strong>
+                <p>Custom theme on your profile</p>
+              </div>
+            </div>
+            <span>{monthly ? '+$2/mo' : '+$20/yr'}</span>
+          </div>
         </div>
       </div>
-
-      <button className='btn-back' onClick={handleBack}>Go Back</button>
-      <Button variant="primary" type="submit" onClick={() => navigate('/step4')}>
-            Next Step
-      </Button>
+      <div className='btn-container'>
+        <button className='btn-back' onClick={handleBack}>Go Back</button>
+        <Button variant="primary" type="submit" onClick={() => navigate('/step4')}>
+              Next Step
+        </Button>
+      </div>
     </div>
   )
 }

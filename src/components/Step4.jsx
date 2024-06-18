@@ -37,36 +37,43 @@ const Step4 = () => {
 
   return (
     <div className="step-content">
-      <h1 className="title">Finishing up</h1>
-      <p className="description">Double-check everything looks OK before confirming.</p>
-      <div className='selected-plan'>
-        <div className="plan-info">
-          <div className="plan-name">
-            {selectedPlan} {'(' + billingToUpperCase + ')'}
-            <button className='btn-change' onClick={handleChange}>Change</button>
-          </div>
-          <strong className="plan-price">
-            {JSON.parse(localStorage.getItem('selectedPlan')).price}
-          </strong>
+      <div>
+        <div>
+          <h1 className="title">Finishing up</h1>
+          <p className="description">Double-check everything looks OK before confirming.</p>
         </div>
-        <div className='selected-addons'>
-          {addons.map((addon) => (
-            <div className="addon-info" key={addon.addonName}>
-              <span className='addon-name'>{addon.addonName}</span>
-              <span className='addon-price'>+{addon.price}</span>
+        <div>
+          <div className='selected-plan'>
+            <div className="plan-info">
+              <div className="plan-name">
+                {selectedPlan} {'(' + billingToUpperCase + ')'}
+                <button className='btn-change' onClick={handleChange}>Change</button>
+              </div>
+              <strong className="plan-price">
+                {JSON.parse(localStorage.getItem('selectedPlan')).price}
+              </strong>
             </div>
-          ))}
+            <div className='selected-addons'>
+              {addons.map((addon) => (
+                <div className="addon-info" key={addon.addonName}>
+                  <span className='addon-name'>{addon.addonName}</span>
+                  <span className='addon-price'>+{addon.price}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className='total-info'>
+            <span className='total'>Total (per {billing === 'monthly' ? 'month' : 'year'})</span>
+            <strong className='total-price'>+${total}/{billing === 'monthly' ? 'mo' : 'yr'}</strong>
+          </div>
         </div>
       </div>
-      <div className='total-info'>
-        <span className='total'>Total (per {billing === 'monthly' ? 'month' : 'year'})</span>
-        <strong className='total-price'>+${total}/{billing === 'monthly' ? 'mo' : 'yr'}</strong>
+      <div className='btn-container'>
+        <button className='btn-back' onClick={() => navigate(-1)}>Go Back</button>
+        <Button className='btn-confirm' variant="primary" type="submit" onClick={() => navigate('/step5')}>
+              Confirm
+        </Button>
       </div>
-
-      <button className='btn-back' onClick={() => navigate(-1)}>Go Back</button>
-      <Button className='btn-confirm' variant="primary" type="submit" onClick={() => navigate('/step5')}>
-            Confirm
-      </Button>
     </div>
   )
 }

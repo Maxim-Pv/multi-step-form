@@ -28,3 +28,8 @@
 .form-control::placeholder {
   color: $Cool-gray;
 }
+
+.button {
+  display: flex;
+  justify-content: end;
+}

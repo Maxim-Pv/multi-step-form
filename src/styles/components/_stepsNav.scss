@@ -46,3 +46,17 @@
 .step-name {
   color: $Pastel-blue;
 }
+
+@media (max-width: 375px) {
+  .steps-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../assets/images/bg-sidebar-mobile.svg) no-repeat;
+    background-size: contain;
+    background-position: top center;
+    width: 100%;
+    z-index: -1;
+    border-radius: unset;
+  }
+}

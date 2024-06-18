@@ -49,7 +49,9 @@ body {
 .step-content {
   width: 54%;
   margin: 30px 60px 20px 0;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .title {
@@ -62,12 +64,33 @@ body {
   color: $Cool-gray;
 }
 
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .btn-primary {
   padding: 8px 18px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
   background-color: $Marine-blue;
   border: none;
 }
 
+@media (max-width: 375px) {
+  .container {
+    margin: unset;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: -2;
+    background-color: unset;
+  }
+
+  .step-content {
+    width: 100%;
+    margin: 100px 0;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0px 6px 8px 0px $Light-gray;
+  }
+}
