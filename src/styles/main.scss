@@ -2,6 +2,7 @@
 @import "./components/step2";
 @import "./components/step3";
 @import "./components/step4";
+@import "./components/step5";
 @import "./components/stepsNav";
 @import "./colors";
 
@@ -59,5 +60,14 @@ body {
 .description {
   margin-bottom: 30px;
   color: $Cool-gray;
+}
+
+.btn-primary {
+  padding: 8px 18px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: $Marine-blue;
+  border: none;
 }
 

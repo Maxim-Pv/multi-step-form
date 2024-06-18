@@ -1,8 +1,9 @@
-.plan {
+.selected-plan {
   width: 100%;
   padding: 15px 20px;
   background-color: $Magnolia;
   border: none;
+  border-radius: 10px;
 }
 
 .plan-info {
@@ -31,6 +32,10 @@
   cursor: pointer;
 }
 
+.btn-change:hover {
+  color: $Purplish-blue;
+}
+
 .plan-price {
   color: $Marine-blue;
 }
@@ -56,4 +61,25 @@
 
 .addon-price {
   color: $Marine-blue;
+}
+
+.total-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.total-price {
+  font-size: 18px;
+  color: $Purplish-blue;
+}
+
+.btn-primary.btn-confirm {
+  background-color: $Purplish-blue;
+}
+
+.btn-primary.btn-confirm:hover {
+  background-color: hsl(243deg 100% 62% / 53%);
 }

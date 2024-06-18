@@ -7,14 +7,6 @@
   border-color: hsl(213, 96%, 18%);
 }
 
-.btn-primary {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: hsl(213, 96%, 18%);
-  border: none;
-}
-
 .label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -93,6 +85,12 @@
   border-radius: 10px;
   color: hsl(213, 96%, 18%);
   cursor: pointer;
+}
+
+.plan:hover {
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  border-color: hsl(243, 100%, 62%);
 }
 
 .plan-img {
@@ -217,6 +215,12 @@
   color: hsl(243, 100%, 62%);
 }
 
+.addon:hover {
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  border-color: hsl(243, 100%, 62%);
+}
+
 .checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -231,11 +235,12 @@
   border-color: hsl(243, 100%, 62%);
 }
 
-.plan {
+.selected-plan {
   width: 100%;
   padding: 15px 20px;
   background-color: hsl(217, 100%, 97%);
   border: none;
+  border-radius: 10px;
 }
 
 .plan-info {
@@ -280,6 +285,10 @@
   cursor: pointer;
 }
 
+.btn-change:hover {
+  color: hsl(243, 100%, 62%);
+}
+
 .plan-price {
   color: hsl(213, 96%, 18%);
 }
@@ -317,6 +326,63 @@
 
 .addon-price {
   color: hsl(213, 96%, 18%);
+}
+
+.total-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 20px;
+}
+
+.total-price {
+  font-size: 18px;
+  color: hsl(243, 100%, 62%);
+}
+
+.btn-primary.btn-confirm {
+  background-color: hsl(243, 100%, 62%);
+}
+
+.btn-primary.btn-confirm:hover {
+  background-color: hsla(243, 100%, 62%, 0.53);
+}
+
+.summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.summary-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background: url(../../assets/images/icon-thank-you.svg) no-repeat;
+  background-size: contain;
 }
 
 .steps-nav {
@@ -442,4 +508,13 @@ body {
 .description {
   margin-bottom: 30px;
   color: hsl(231, 11%, 63%);
+}
+
+.btn-primary {
+  padding: 8px 18px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: hsl(213, 96%, 18%);
+  border: none;
 }

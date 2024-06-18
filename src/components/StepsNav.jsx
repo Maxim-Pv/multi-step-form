@@ -30,7 +30,7 @@ const StepsNav = () => {
         </div>
       </div>
       <div className='step'>
-        <span className={'step-number' + (location.pathname === '/step4' ? ' active' : '')}>4</span>
+        <span className={'step-number' + ((location.pathname === '/step4' || location.pathname === '/step5') ? ' active' : '')}>4</span>
         <div className='step-info'>
           <span className='step-name'>STEP 4</span>
           <strong>SUMMARY</strong>

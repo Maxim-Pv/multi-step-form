@@ -8,9 +8,27 @@ const Step3 = () => {
   const selectedPlan = JSON.parse(localStorage.getItem('selectedPlan'))
   const monthly = selectedPlan.billing === 'monthly'
 
+  const monthlyPrices = {
+    onlineService: '$1/mo',
+    largerStorage: '$2/mo',
+    customizableProfile: '$2/mo'
+  }
+
+  const yearlyPrices = {
+    onlineService: '$10/yr',
+    largerStorage: '$20/yr',
+    customizableProfile: '$20/yr'
+  }
+
+  const handleBack = () => {
+    localStorage.setItem('selectedAddons', '[]')
+    navigate('/step2')
+  }
+
   const [selectedAddons, setSelectedAddons] = useState(() => {
     const savedAddons = localStorage.getItem('selectedAddons')
-    return savedAddons ? JSON.parse(savedAddons) : [];
+    return savedAddons ? JSON.parse(savedAddons) : 
+    [{ addonName: 'onlineService', price: monthly ? monthlyPrices.onlineService : yearlyPrices.onlineService }];
   })
 
   useEffect(() => {
@@ -68,17 +86,7 @@ const Step3 = () => {
     });
   };
 
-  const monthlyPrices = {
-    onlineService: '$1/mo',
-    largerStorage: '$2/mo',
-    customizableProfile: '$2/mo'
-  }
-
-  const yearlyPrices = {
-    onlineService: '$10/yr',
-    largerStorage: '$20/yr',
-    customizableProfile: '$20/yr'
-  }
+  
 
   return (
     <div className="step-content">
@@ -144,7 +152,7 @@ const Step3 = () => {
         </div>
       </div>
 
-      <button className='btn-back' onClick={() => navigate(-1)}>Go Back</button>
+      <button className='btn-back' onClick={handleBack}>Go Back</button>
       <Button variant="primary" type="submit" onClick={() => navigate('/step4')}>
             Next Step
       </Button>

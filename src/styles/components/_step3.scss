@@ -28,6 +28,11 @@
   }
 }
 
+.addon:hover {
+  transition: border-color .3s ease;
+  border-color: $Purplish-blue;
+}
+
 .checkbox {
   display: flex;
   align-items: center;
@@ -38,11 +43,3 @@
   border-color: $Purplish-blue;
 }
 
-// .form-check-input {
-//   border: 1px solid $Light-gray;
-//   background-color: inherit;
-// }
-
-// .form-check-input:checked {
-//   background-color: $Purplish-blue;
-// }

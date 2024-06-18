@@ -1,0 +1,15 @@
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.summary-img {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background: url(../../assets/images/icon-thank-you.svg) no-repeat;
+  background-size: contain;
+}
