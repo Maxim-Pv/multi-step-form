@@ -43,3 +43,18 @@
   border-color: $Purplish-blue;
 }
 
+@media (max-width: 375px) {
+  .addons {
+    gap: 15px;
+
+    div {
+      p {
+        font-size: 12px;
+      }
+    }
+
+    span {
+      font-size: 14px;
+    }
+  }
+}

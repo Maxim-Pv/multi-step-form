@@ -29,7 +29,8 @@
   color: $Cool-gray;
 }
 
-.button {
-  display: flex;
-  justify-content: end;
+@media (max-width: 375px) {
+  .form-label {
+    margin-bottom: unset;
+  }
 }

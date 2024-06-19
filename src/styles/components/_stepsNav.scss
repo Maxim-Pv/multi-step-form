@@ -49,6 +49,8 @@
 
 @media (max-width: 375px) {
   .steps-nav {
+    flex-direction: row;
+    justify-content: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -58,5 +60,14 @@
     width: 100%;
     z-index: -1;
     border-radius: unset;
+    gap: 20px;
+  }
+
+  .step-info {
+    display: none;
+  }
+
+  .step-number {
+    margin-right: unset;
   }
 }
