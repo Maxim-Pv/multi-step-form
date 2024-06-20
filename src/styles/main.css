@@ -1,0 +1,693 @@
+.form-label {
+  font-weight: 700;
+  color: hsl(213, 96%, 18%);
+}
+
+.form-control:focus {
+  border-color: hsl(213, 96%, 18%);
+}
+
+.label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.error {
+  color: hsl(354, 84%, 57%);
+}
+
+.invalid-feedback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  width: 50%;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: hsl(231, 11%, 63%);
+}
+
+.form-control::-moz-placeholder {
+  color: hsl(231, 11%, 63%);
+}
+
+.form-control:-ms-input-placeholder {
+  color: hsl(231, 11%, 63%);
+}
+
+.form-control::-ms-input-placeholder {
+  color: hsl(231, 11%, 63%);
+}
+
+.form-control::placeholder {
+  color: hsl(231, 11%, 63%);
+}
+
+@media (max-width: 425px) {
+  .form-label {
+    margin-bottom: unset;
+  }
+}
+.plans {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.plan {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding: 15px 13px 12px 13px;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+  color: hsl(213, 96%, 18%);
+  cursor: pointer;
+}
+
+.plan:hover {
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  border-color: hsl(243, 100%, 62%);
+}
+
+.plan-img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+.img1 {
+  background: url(../../assets/images/icon-arcade.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.img2 {
+  background: url(../../assets/images/icon-advanced.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.img3 {
+  background: url(../../assets/images/icon-pro.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.price {
+  color: hsl(231, 11%, 63%);
+}
+
+.discount {
+  font-size: 14px;
+  letter-spacing: -0.5px;
+}
+
+.btn-back {
+  background-color: inherit;
+  border: none;
+  font-weight: 600;
+  color: hsl(231, 11%, 63%);
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.btn-back:hover {
+  color: hsl(213, 96%, 18%);
+}
+
+.toggle {
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: hsl(217, 100%, 97%);
+  border-radius: 10px;
+  gap: 20px;
+}
+.toggle span {
+  color: hsl(231, 11%, 63%);
+}
+
+.toggle .selectedPeriod {
+  font-weight: 800;
+  color: hsl(213, 96%, 18%);
+}
+
+.selected {
+  border-color: hsl(243, 100%, 62%);
+  background-color: hsl(217, 100%, 97%);
+}
+
+.form-check-input {
+  border: none;
+}
+
+.form-check-input,
+.form-check-input:checked {
+  background-color: hsl(213, 96%, 18%);
+}
+
+.form-switch .form-check-input {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%27-4%20-4%208%208%27%3E%3Ccircle%20r%3D%273%27%20fill%3D%27%23fff%27%2F%3E%3C%2Fsvg%3E");
+}
+
+@media (max-width: 425px) {
+  .plans {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+  .plan {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .plan-img {
+    margin-bottom: unset;
+    margin-right: 15px;
+  }
+  .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .btn-container {
+    position: absolute;
+    background-color: white;
+    padding: 15px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+.addons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.addon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.addon div p {
+  margin: 0;
+  line-height: normal;
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+}
+.addon span {
+  color: hsl(243, 100%, 62%);
+}
+
+.addon:hover {
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  border-color: hsl(243, 100%, 62%);
+}
+
+.checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.addon.selected {
+  border-color: hsl(243, 100%, 62%);
+}
+
+@media (max-width: 425px) {
+  .addons {
+    gap: 15px;
+  }
+  .addons div p {
+    font-size: 12px;
+  }
+  .addons span {
+    font-size: 14px;
+  }
+}
+.selected-plan {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: hsl(217, 100%, 97%);
+  border: none;
+  border-radius: 10px;
+}
+
+.plan-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid hsl(229, 24%, 87%);
+}
+
+.plan-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  font-weight: 800;
+  color: hsl(213, 96%, 18%);
+}
+
+.btn-change {
+  background-color: inherit;
+  border: none;
+  color: hsl(231, 11%, 63%);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn-change:hover {
+  color: hsl(243, 100%, 62%);
+}
+
+.plan-price {
+  color: hsl(213, 96%, 18%);
+}
+
+.selected-addons {
+  width: 100%;
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.addon-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.addon-name,
+.total {
+  color: hsl(231, 11%, 63%);
+}
+
+.addon-price {
+  color: hsl(213, 96%, 18%);
+}
+
+.total-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 20px;
+}
+
+.total-price {
+  font-size: 18px;
+  color: hsl(243, 100%, 62%);
+}
+
+.btn-primary.btn-confirm {
+  background-color: hsl(243, 100%, 62%);
+}
+
+.btn-primary.btn-confirm:hover {
+  background-color: hsla(243, 100%, 62%, 0.53);
+}
+
+.step-content.summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.summary-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background: url(../../assets/images/icon-thank-you.svg) no-repeat;
+  background-size: contain;
+}
+
+.summary-text {
+  text-align: center;
+  color: hsl(231, 11%, 63%);
+}
+
+@media (max-width: 425px) {
+  .step-content.summary {
+    padding: 80px 25px;
+  }
+  .summary-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+.steps-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 28%;
+  padding: 40px 30px;
+  height: 100%;
+  background: url(../../assets/images/bg-sidebar-desktop.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  color: hsl(231, 100%, 99%);
+  gap: 25px;
+}
+
+.step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 1px solid hsl(231, 100%, 99%);
+  background-color: inherit;
+  color: hsl(231, 100%, 99%);
+  font-weight: 700;
+}
+
+.active {
+  background-color: hsl(206, 94%, 87%);
+  border: 1px solid hsl(213, 96%, 18%);
+  color: hsl(213, 96%, 18%);
+}
+
+.step-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: normal;
+  font-size: 14px;
+}
+
+.step-name {
+  color: hsl(228, 100%, 84%);
+}
+
+@media (max-width: 425px) {
+  .steps-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../assets/images/bg-sidebar-mobile.svg) no-repeat;
+    background-size: contain;
+    background-position: top center;
+    width: 100%;
+    z-index: -1;
+    border-radius: unset;
+    gap: 20px;
+  }
+  .step-info {
+    display: none;
+  }
+  .step-number {
+    margin-right: unset;
+  }
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../../assets/fonts/Ubuntu-Bold.ttf);
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../../assets/fonts/Ubuntu-Medium.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../../assets/fonts/Ubuntu-Regular.ttf);
+  font-weight: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(217, 100%, 97%);
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  margin: 50px auto;
+  border-radius: 10px;
+  background-color: hsl(231, 100%, 99%);
+}
+
+.step-content {
+  width: 54%;
+  margin: 30px 60px 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.title {
+  font-weight: 900;
+  color: hsl(213, 96%, 18%);
+}
+
+.description {
+  margin-bottom: 30px;
+  color: hsl(231, 11%, 63%);
+}
+
+.btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btn-primary {
+  padding: 8px 18px;
+  background-color: hsl(213, 96%, 18%);
+  border: none;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+@media (max-width: 425px) {
+  .container {
+    margin: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: -2;
+    background-color: unset;
+  }
+  .step-content {
+    width: 100%;
+    margin: 85px 0 120px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    -webkit-box-shadow: 0px 6px 8px 0px hsl(229, 24%, 87%);
+            box-shadow: 0px 6px 8px 0px hsl(229, 24%, 87%);
+  }
+  .description {
+    width: 85%;
+    margin-bottom: 20px;
+  }
+  .button {
+    position: absolute;
+    background-color: white;
+    padding: 15px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}

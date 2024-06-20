@@ -1,0 +1,145 @@
+@import "../colors";
+
+.plans {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.plan {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 15px 13px 12px 13px;
+  border: 1px solid $Light-gray;
+  border-radius: 10px;
+  color: $Marine-blue;
+  cursor: pointer;
+}
+
+.plan:hover {
+  transition: border-color .3s ease;
+  border-color: $Purplish-blue;
+}
+
+.plan-img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+.img1 {
+  background: url(../../assets/images/icon-arcade.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.img2 {
+  background: url(../../assets/images/icon-advanced.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.img3 {
+  background: url(../../assets/images/icon-pro.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  color: $Cool-gray;
+}
+
+.discount {
+  font-size: 14px;
+  letter-spacing: -.5px;
+}
+
+.btn-back {
+  background-color: inherit;
+  border: none;
+  font-weight: 600;
+  color: $Cool-gray;
+  cursor: pointer;
+  transition: color .3s ease;
+}
+
+.btn-back:hover {
+  color: $Marine-blue;
+}
+
+.toggle {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: $Magnolia;
+  border-radius: 10px;
+  gap: 20px;
+
+  span {
+    color: $Cool-gray;
+  }
+}
+
+.toggle .selectedPeriod {
+  font-weight: 800;
+  color: $Marine-blue;
+}
+
+.selected {
+  border-color: $Purplish-blue;
+  background-color: $Magnolia;
+}
+
+.form-check-input {
+  border: none;
+}
+
+.form-check-input,
+.form-check-input:checked {
+  background-color: $Marine-blue;
+}
+
+.form-switch .form-check-input {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%27-4%20-4%208%208%27%3E%3Ccircle%20r%3D%273%27%20fill%3D%27%23fff%27%2F%3E%3C%2Fsvg%3E");
+}
+
+@media (max-width: 425px) {
+  .plans {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .plan {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .plan-img {
+    margin-bottom: unset;
+    margin-right: 15px;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn-container {
+    position: absolute;
+    background-color: white;
+    padding: 15px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,116 @@
+@import "./components/step1";
+@import "./components/step2";
+@import "./components/step3";
+@import "./components/step4";
+@import "./components/step5";
+@import "./components/stepsNav";
+@import "./colors";
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../../assets/fonts/Ubuntu-Bold.ttf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../../assets/fonts/Ubuntu-Medium.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../../assets/fonts/Ubuntu-Regular.ttf);
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $Magnolia;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 50px auto;
+  border-radius: 10px;
+  background-color: $Alabaster;
+}
+
+.step-content {
+  width: 54%;
+  margin: 30px 60px 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 900;
+  color: $Marine-blue;
+}
+
+.description {
+  margin-bottom: 30px;
+  color: $Cool-gray;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-primary {
+  padding: 8px 18px;
+  background-color: $Marine-blue;
+  border: none;
+}
+
+.button {
+  display: flex;
+  justify-content: end;
+}
+
+@media (max-width: 425px) { 
+  
+  .container {
+    margin: unset;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: -2;
+    background-color: unset;
+  }
+
+  .step-content {
+    width: 100%;
+    margin: 85px 0 120px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0px 6px 8px 0px $Light-gray;
+  }
+
+  .description {
+    width: 85%;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    position: absolute;
+    background-color: white;
+    padding: 15px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}

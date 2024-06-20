@@ -1,0 +1,74 @@
+.steps-nav {
+  display: flex;
+  flex-direction: column;
+  width: 28%;
+  padding: 40px 30px;
+  height: 100%;
+  background: url(../../assets/images/bg-sidebar-desktop.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  color: $Alabaster;
+  gap: 25px;
+}
+
+.step {
+  display: flex;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 1px solid $Alabaster;
+  background-color: inherit;
+  color: $Alabaster;
+  font-weight: 700;
+}
+
+.active {
+  background-color: $Light-blue;
+  border: 1px solid $Marine-blue;
+  color: $Marine-blue;
+}
+
+.step-info {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  font-size: 14px;
+}
+
+.step-name {
+  color: $Pastel-blue;
+}
+
+@media (max-width: 425px) {
+  
+  .steps-nav {
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../assets/images/bg-sidebar-mobile.svg) no-repeat;
+    background-size: contain;
+    background-position: top center;
+    width: 100%;
+    z-index: -1;
+    border-radius: unset;
+    gap: 20px;
+  }
+
+  .step-info {
+    display: none;
+  }
+
+  .step-number {
+    margin-right: unset;
+  }
+}
