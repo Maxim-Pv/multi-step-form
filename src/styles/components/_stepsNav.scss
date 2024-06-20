@@ -47,7 +47,8 @@
   color: $Pastel-blue;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
+  
   .steps-nav {
     flex-direction: row;
     justify-content: center;

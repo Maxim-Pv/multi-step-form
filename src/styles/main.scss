@@ -80,7 +80,8 @@ body {
   justify-content: end;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) { 
+  
   .container {
     margin: unset;
     flex-direction: column;
