@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution](https://your-solution-url.com)
-- Live Site URL: [site](https://your-live-site-url.com)
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/multi-step-form-using-scss-CqC2X4FpD-)
+- Live Site URL: [site](https://multi-step-form-sable-eight.vercel.app/)
 
 ### Built with
 
